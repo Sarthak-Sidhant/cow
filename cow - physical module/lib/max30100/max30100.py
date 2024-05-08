@@ -104,7 +104,7 @@ class MAX30100(object):
                  ):
 
         # Default to the standard I2C bus on ESP8266.
-        self.i2c = machine.I2C(scl=machine.Pin(2), sda=machine.Pin(0))
+        self.i2c = machine.I2C(0,scl=machine.Pin(17), sda=machine.Pin(16))
 
         self.set_mode(MODE_HR)  # Trigger an initial temperature read.
         self.set_led_current(led_current_red, led_current_ir)
