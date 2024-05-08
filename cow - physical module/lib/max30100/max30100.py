@@ -4,10 +4,17 @@
   Based on original C library for Arduino by Connor Huffine/Kontakt
   https: // github.com / kontakt / MAX30100
 
+ Based on original Python library by mfitzip 
+  https: // github.com / mfitzip / MAX30100
+
   September 2017
+
+credits to https://github.com/bj5/max30100/blob/master/max30100.py
+
+
 """
 
-import smbus
+import machine
 
 INT_STATUS   = 0x00  # Which interrupts are tripped
 INT_ENABLE   = 0x01  # Which interrupts are active
